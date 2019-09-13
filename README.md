@@ -26,19 +26,40 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+ANS: 
+React JS is a javascript library for building user interfaces. React JS breaks down a huge piece of user interface into smaller chunks which are called components. React Component is an independent, reusable code and it contains HTML-like looking syntax and some Javascript. React JS components are reusable and efficiently manages data that changes over time(State)
+
+
+
 - [ ] What does it mean to _think_ in react?
+
+Thinking in React means breaking a complex UI into children components and establishing Component Hierarchy within our application. If I'm to build the UI for an application, the first thing I’ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. 
+
+when deciding what should be its own component, I simply use the single responsibility principle, which says that a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
 
 - [ ] Describe state.
 
+ANS: State refers to data which has the ability to change over time during the course of an application program.
+      Component state can be modified over time in response to user actions, network responses, and anything. 
+      State is what allows us to create components that are dynamic and interactive.
+      
+
 - [ ] Describe props.
 
+ANS: Props is a mechanism through which state trickles down data or state from parent component to child component. 
+Props of component are passed from parent component which invokes component. In a way, Props are similar to arguments 
+for pure functions argument but Props in a component cannot be modified(Immutable).
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+ANS: 
+A "side effect" is anything that affects something outside the scope of the function being executed. These can be, say, a network request, which has your code communicating with a third party (and thus making the request, causing logs to be recorded, caches to be saved or updated, all sorts of effects that are outside the function.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [ ] Create a forked copy of this project. 
 - [ ] Add TL as collaborator on Github.
 - [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
 - [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
