@@ -3,13 +3,14 @@ import Film from "./Film";
 import Species from "./Species"
 import Vehicle from "./Vehicle";
 import Starship from "./Starship";
+import Biodata from "./Biodata";
 
 
 function Starwars(props) {
     const { details } = props;
     return (
         <div>
-            <div><span>Name: </span> "tope"</div>
+            <Biodata />
             <Film />
             <Species />  
             <Vehicle />

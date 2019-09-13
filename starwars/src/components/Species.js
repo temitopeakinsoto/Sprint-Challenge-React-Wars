@@ -4,7 +4,7 @@ import React from "react";
 function Species (props) {
     const { eachSpecies } = props;
     return(        
-        // <p>{specie}</p>  
+        // <p>{eachSpecies}</p>  
         <p>"Sample Specie"</p>  
     )
 }
