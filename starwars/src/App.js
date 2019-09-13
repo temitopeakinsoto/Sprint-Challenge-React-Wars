@@ -25,10 +25,10 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
 
       { apiCallInfo.map((individualApiCallInfo) => (
-        <Starwars starwarsCharacterInfo={individualApiCallInfo}/>
+        <Starwars key={individualApiCallInfo} starwarsCharacterInfo={individualApiCallInfo}/>
       ))      
       }
-      
+
     </div>
   );
 }
