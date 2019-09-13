@@ -1,6 +1,8 @@
 import React from "react";
 import Film from "./Film";
 import Species from "./Species"
+import Vehicle from "./Vehicle";
+import Starship from "./Starship";
 
 
 function Starwars(props) {
@@ -9,7 +11,9 @@ function Starwars(props) {
         <div>
             <div><span>Name: </span> "tope"</div>
             <Film />
-            <Species />            
+            <Species />  
+            <Vehicle />
+            <Starship />          
 
         </div>
         

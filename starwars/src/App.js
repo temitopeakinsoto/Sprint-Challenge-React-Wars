@@ -18,9 +18,9 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-    <Starwars />
+    <div className="App">   
       <h1 className="Header">React Wars</h1>
+      <Starwars />
     </div>
   );
 }
