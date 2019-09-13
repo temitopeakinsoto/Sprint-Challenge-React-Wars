@@ -1,10 +1,18 @@
 import React from "react";
+import Film from "./Film";
+import Species from "./Species"
 
 
 function Starwars(props) {
     const { details } = props;
     return (
-        <h1>Hellow there</h1>
+        <div>
+            <div><span>Name: </span> "tope"</div>
+            <Film />
+            <Species />            
+
+        </div>
+        
     )
 }
 
