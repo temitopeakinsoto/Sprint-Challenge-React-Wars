@@ -1,11 +1,19 @@
 import React from "react";
+import styles from "styled-components";
 
+
+const SpeciesComponentDiv = styles.div`
+   
+    font-size: 22px;
+    color: white; 
+    font-weight: bold; 
+    
+`
 
 function Species (props) {
     const { eachSpecies } = props;
     return(        
-        // <p>{eachSpecies}</p>  
-        <p>"Sample Specie"</p>  
+         <SpeciesComponentDiv>{eachSpecies}</SpeciesComponentDiv>  
     )
 }
 

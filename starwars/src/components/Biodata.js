@@ -1,13 +1,18 @@
 import React from "react";
+import styles from "styled-components";
+
+const BiodataComponentDiv = styles.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 30px; 
+    color: white;       
+`
 
 
 function Biodata (props) {
     const { biodata } = props;
-    return(
-        
-        // <p>{biodata}</p>
-        <p>"sample bio_data"</p>
-    
+    return(        
+        <BiodataComponentDiv>{biodata}</BiodataComponentDiv>    
     )
 }
 

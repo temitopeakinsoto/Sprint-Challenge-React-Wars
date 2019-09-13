@@ -12,13 +12,28 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [apiCallError, setApiCallError] = useState(null);
-  const [apiReturnInfo, setApiReturnInfo] = useState({ bioData: [], film: [], vehicle: [], species: [], starship:[] });
+  const [apiCallInfo, setApiCallInfo] = useState([]);
+  const [error, setApiCallError] = useState("");
+  useEffect(() => {
+    axios
+      .get("https://swapi.co/api/people/?format=json")
+      .then(response => {
+        setApiCallInfo(response.data.results);
+      })
+      .catch(error => {
+        setApiCallError("There was an error fetching data from the starwars server:", error.message);
+      });
+  }, []);
+
 
   return (
     <div className="App">   
       <h1 className="Header">React Wars</h1>
-      <Starwars />
+      {apiCallInfo.map((individualApiCallInfo) => (
+        <Starwars peopleItem={individualApiCallInfo}/>
+      ))
+      
+      }
     </div>
   );
 }
