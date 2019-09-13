@@ -1,7 +1,15 @@
 import React from 'react';
-import './App.css';
+import axios from 'axios';
+import Starwars from './components/Starwars';
+import './App.css'; 
 
 const App = () => {
+
+  axios.get('https://swapi.co/api/people')
+  .then((response) => {
+    console.log('this response', response.data)
+  })
+  .catch()
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -11,6 +19,7 @@ const App = () => {
 
   return (
     <div className="App">
+    <Starwars />
       <h1 className="Header">React Wars</h1>
     </div>
   );
